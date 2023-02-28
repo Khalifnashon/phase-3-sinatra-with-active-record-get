@@ -10,7 +10,11 @@ gem "activerecord", "~> 6.1"
 
 # Configures common Rake tasks for working with Active Record
 # https://github.com/sinatra-activerecord/sinatra-activerecord
-gem "sinatra-activerecord"
+# gem "sinatra-activerecord"
+gem 'sinatra-activerecord', '~> 2.0', '>= 2.0.26'
+gem 'puma', '~> 6.1'
+gem 'thin', '~> 1.8', '>= 1.8.1'
+gem 'webrick'
 
 # Run common tasks from the command line
 # https://github.com/ruby/rake
@@ -28,7 +32,8 @@ gem "require_all"
 group :development do
   # Used to generate seed data
   # https://github.com/faker-ruby/faker
-  gem "faker", "~> 2.18"
+  # gem "faker", "~> 2.18"
+  gem 'faker', '~> 3.1', '>= 3.1.1'
 
   # Auto-reload the server when files are changed
   # https://github.com/alexch/rerun
